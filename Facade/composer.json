@@ -1,0 +1,23 @@
+{
+    "name": "patterns/pdf-generator",
+    "description": "Sistema de geração de PDF e DOCX a partir de texto",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "tecnickcom/tcpdf": "^6.6",
+        "phpoffice/phpword": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\": "application/",
+            "Application\\UseCase\\": "application/usecase/",
+            "Internal\\": "internal/",
+            "Internal\\Contracts\\": "internal/contracts/",
+            "Internal\\Facade\\": "internal/facade/",
+            "Internal\\Converters\\": "internal/converters/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+} 
