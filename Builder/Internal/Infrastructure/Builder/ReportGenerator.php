@@ -17,7 +17,7 @@ class ReportGenerator
     {
         $this->builder->setTitle($data['title']);
         foreach ($data['sections'] as $section) {
-            $this->builder->addSection($section['title_section'], $section['content']);
+            $this->builder->addSection($section['title'], $section['content']);
         }
         return $this->builder->getReport();
     }

@@ -9,7 +9,7 @@ class ReportMock
         // DADOS MOCK PARA REFERÊNCIA
         return [
             'title' => 'Relatório de Vendas - Janeiro 2024',
-            'sessions' => [
+            'sections' => [
                 [
                     'title' => 'Produtos Mais Vendidos',
                     'content' => [

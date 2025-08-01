@@ -8,6 +8,13 @@ class TextBuilder implements ReportInterface
 {
     private $report;
 
+    public function __construct()
+    {
+        $this->report = new \stdClass();
+        $this->report->title = '';
+        $this->report->sections = [];
+    }
+
     public function setTitle(string $title): self
     {
         $this->report->title = "{$title}\n================\n";
@@ -25,6 +32,14 @@ class TextBuilder implements ReportInterface
 
     public function getReport(): string
     {
-        return $this->report;
+        $output = $this->report->title;
+        foreach ($this->report->sections as $section) {
+            $output .= $section['title_section'] . "\n";
+            foreach ($section['content'] as $item) {
+                $output .= "- " . $item . "\n";
+            }
+            $output .= "\n";
+        }
+        return $output;
     }
 }
